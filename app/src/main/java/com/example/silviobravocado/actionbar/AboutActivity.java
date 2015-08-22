@@ -7,19 +7,18 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends ActionBarActivity {
+public class AboutActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_about);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
-
         return true;
     }
 
@@ -36,7 +35,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
 
-        if( id == R.id.action_home ){  //Vamos al layout about
+        if( id == R.id.action_home ){  //Vamos al layout home
 
             Intent intent = new Intent(this, MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -53,7 +52,6 @@ public class MainActivity extends ActionBarActivity {
             return true;
 
         }
-
 
         return super.onOptionsItemSelected(item);
     }
